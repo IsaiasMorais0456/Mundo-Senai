@@ -1,0 +1,77 @@
+
+# PASSO A PASSO PARA RODAR O PROJETO 'DETECÇÃO DE OLHOS' EM QUALQUER COMPUTADOR
+
+## 1. Verifique se você tem o Python 3.11 instalado
+- Caminho típico:
+  C:\Users\SEU_USUARIO\AppData\Local\Programs\Python\Python311\python.exe
+
+- Se não tiver, instale pelo site oficial:
+  https://www.python.org/downloads/release/python-3119/
+
+---
+
+## 2. Abra o terminal (PowerShell) na pasta do projeto
+
+Exemplo de caminho:
+C:\Users\SEU_USUARIO\Desktop\Projeto_SENAI_Completo
+
+---
+
+## 3. Crie o ambiente virtual com Python 3.11
+
+Digite no terminal:
+
+    & "C:\Users\SEU_USUARIO\AppData\Local\Programs\Python\Python311\python.exe" -m venv venv
+
+---
+
+## 4. Ative o ambiente virtual
+
+No PowerShell:
+
+    .\venv\Scripts\Activate.ps1
+
+Se aparecer erro de permissão:
+
+    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+    .\venv\Scripts\Activate.ps1
+
+---
+
+## 5. Instale as bibliotecas necessárias
+
+Se você tiver o arquivo requirements.txt:
+
+    pip install -r requirements.txt
+
+Ou instale manualmente:
+
+    pip install opencv-python mediapipe numpy scipy matplotlib
+
+---
+
+## 6. Execute o projeto
+
+Para usar uma imagem:
+
+    python detector_imagem.py
+
+Para usar a câmera ao vivo:
+
+    python detector_camera.py
+
+---
+
+## DICA FINAL
+
+Se digitar apenas `python` mostrar uma mensagem da Microsoft Store, use o caminho completo do Python:
+
+    & "C:\Users\SEU_USUARIO\AppData\Local\Programs\Python\Python311\python.exe"
+
+Ou crie um alias temporário:
+
+    Set-Alias python "C:\Users\SEU_USUARIO\AppData\Local\Programs\Python\Python311\python.exe"
+
+---
+
+Pronto! Agora você consegue rodar seu projeto em qualquer computador com esse passo a passo.
